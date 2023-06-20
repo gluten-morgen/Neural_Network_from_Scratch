@@ -123,9 +123,6 @@ class NN:
             NN.BIAS = bias
             # set if load_weights is true
             NN.LOAD_WEIGHTS = load_weights
-        # else:
-        #     if NN.BIAS != bias:
-        #         raise Warning('Bias can only be set on first initialization of class.')
 
         if NN.BIAS:
             # add the bias node to num of inputs
@@ -357,8 +354,6 @@ class NN:
 
                 # Retrieve results from completed tasks
                 gradients = [task.result() for task in thread.as_completed(gradient_batch)]
-
-            # gradients = self.get_gradients(Y[0], NN.A_BATCH[0], NN.Z_BATCH[0])
 
 
             for idx, batch in enumerate(gradients):
