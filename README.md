@@ -51,7 +51,7 @@ The Weights are stored as a `list` of numpy arrays, or `np.ndarray`.
 
 Operations are performed on all batches containing $m$ samples of data. When an operation such as,
 
-$Z = W X^T + b$
+$$Z = W X^T + b$$
 
 where,
 
