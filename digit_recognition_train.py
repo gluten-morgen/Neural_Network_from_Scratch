@@ -1,5 +1,10 @@
 '''
-Data downloaded from Kaggle (https://www.kaggle.com/datasets/oddrationale/mnist-in-csv?resource=download) 
+Training the Neural Network.
+
+The neural Network is trained on 60000 examples of images containing handwritten digits.
+It is tested on 10000 images.
+
+Dataset downloaded from Kaggle (https://www.kaggle.com/datasets/oddrationale/mnist-in-csv?resource=download) 
 under the Creative Commons license.
 '''
 
@@ -91,15 +96,15 @@ def get_batch(sample_size:int, X:np.ndarray, y:np.ndarray):
 
 
 # create neural network
-
 layer1 = NN(inputs=784, outputs=256, activation='relu')
 layer2 = NN(inputs=256, outputs=512, activation='sigmoid')
 layer3 = NN(inputs=512, outputs=256, activation='sigmoid')
 layer4 = NN(inputs=256, outputs=10, activation='softmax')
 
-back_prop = NN.Backward_Propagation(loss='MCE')
-optim = NN.Optimizer(optimizer='ADAM', alpha=0.001)
+back_prop = NN.Backward_Propagation(loss='MCE') # backpropagation class
+optim = NN.Optimizer(optimizer='ADAM', alpha=0.001) # optimizer
 
+# utility classes
 f = Functions()
 m = Metrics()
 utils = Utils()
@@ -107,13 +112,13 @@ utils = Utils()
 
 
 # get data batches
-batch_size = 10000
+batch_size = 60000
 X_train_batch, y_train_batch = get_batch(batch_size, X_train, y_train)
 
 
 # train the neural network
 
-epochs = 200
+epochs = 1500
 
 for epoch in range(epochs):
 
@@ -161,6 +166,6 @@ y_hat = outputs_to_labels(y_hat)
 
 accuracy = m.accuracy(y_hat, y_test_labels)
 
-print(f'Test Set Accuracy: {accuracy * 100} %')
+print(f'\n\n*******  Test Set Accuracy: {accuracy * 100} %  *******\n\n')
 
 

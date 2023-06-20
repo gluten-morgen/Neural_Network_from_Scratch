@@ -88,19 +88,24 @@ class NN:
     
     def __init__(self, inputs:int, outputs:int, activation='relu', seed=42, bias=False, load_weights=False, filename=''):
         '''
+        # Class NN
         Create and initialize a Neural Network layer.
 
-        inputs = number of inputs
+        ## Parameters
 
-        outputs = number of outputs
+        inputs : number of inputs
 
-        activation = activation function (relu, sigmoid, tanh, softmax)
+        outputs : number of outputs
 
-        seed = random seed
+        activation : activation function (relu, sigmoid, tanh, softmax)
 
-        bias = add bias node
+        seed : random seed
 
-        load_weights = load weights from a saved '.pkl' file in the current working directory
+        bias : add bias node
+
+        load_weights : load weights from a saved '.pkl' file in the current working directory
+
+        filename : Name of the '.pkl' file containing trained weights. File extension is not required. 
         '''
         self.F = Functions()
         self.utils = Utils(functions=self.F)
@@ -211,8 +216,6 @@ class NN:
 
             # Retrieve results from completed tasks
             outputs = [task.result() for task in thread.as_completed(output_batch)]
-
-        # outputs = self.forward_samples(batch[0], NN.LAYER_CNTR, 0)
 
         if NN.LAYER_CNTR == 1:
             for idx in range(NN.BATCH_SIZE):
@@ -337,7 +340,8 @@ class NN:
 
 
         def backward(self, Y:np.ndarray):
-            '''Backward propagate to obtain gradients through neural network
+            '''
+            Backward propagate to obtain gradients through neural network
 
             Y = 3D numpy array with k batches, n outputs of m samples having shape (k, m, n)
             '''
