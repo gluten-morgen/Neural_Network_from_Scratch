@@ -4,6 +4,21 @@ Training the Neural Network.
 The neural Network is trained on 60000 examples of images containing handwritten digits.
 It is tested on 10000 images.
 
+
+--- Architecture of the Neural Network: ---
+
+Input Layer : 784 inputs
+Hidden Layer 1 : 256 nodes , Activation : ReLU
+Hidden Layer 2 : 512 nodes , Activation :  Sigmoid
+Hidden Layer 3 : 256 nodes , Activation : Sigmoid
+Output Layer : 10 outputs , Activation : Softmax
+
+Loss Function : Multi-class Binary Crossentropy
+
+Optimizer : Adaptive Moment Estimation (ADAM)
+
+
+
 Dataset downloaded from Kaggle (https://www.kaggle.com/datasets/oddrationale/mnist-in-csv?resource=download) 
 under the Creative Commons license.
 '''

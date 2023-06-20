@@ -10,6 +10,14 @@ The displayed image is labelled with the actual and predicted output, and the pr
 printed on the console as well. 
 
 
+--- Architecture of the Neural Network: ---
+
+Input Layer : 784 inputs
+Hidden Layer 1 : 256 nodes , Activation : ReLU
+Hidden Layer 2 : 512 nodes , Activation :  Sigmoid
+Hidden Layer 3 : 256 nodes , Activation : Sigmoid
+Output Layer : 10 outputs , Activation : Softmax
+
 
 Note: The trained weights have a 94.39% accuracy on the test data.
 
