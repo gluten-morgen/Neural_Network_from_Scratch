@@ -11,8 +11,11 @@ Note: The implementation of the Neural Network was inspired from [Pytorch](https
 
 
 This Neural Network was used on two problems:
-- Approximating a XOR gate
-- Recognizing handwritten digits from images
+- [Approximating a XOR gate](xor_problem.py)
+- [Recognizing handwritten digits from images](digit_recognition_test.py)
+
+
+To access the Google Colab notebook that demonstrates the trained Neural Network on handwritten digits, click [here](https://colab.research.google.com/github/gluten-morgen/Neural_Network_from_Scratch/blob/master/digit_recognition_test.ipynb), or open the file [digit_recognition_test.ipynb](digit_recognition_test.ipynb)
 
 
 # Libraries Used
