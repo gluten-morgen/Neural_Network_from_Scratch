@@ -1,11 +1,11 @@
 # Neural Network from Scratch
 
-Neural Network built from scratch using [Numpy](https://numpy.org/)
+Neural Network built from scratch using [Numpy](https://numpy.org/).
 
 
 This project was done for educational purposes only. It may not be very efficient and possible have numerous poor coding practices, but I intend to get better as I learn.
 
-The goal of this project was to understand the and implement the mathematics behind the operation and training of Neural Networks and to be able to train it to solve a simple problem.
+The goal of this project was to understand and implement the mathematics behind the operation and training of Neural Networks and train it to solve a simple problem.
 
 Note: The implementation of the Neural Network was inspired from [Pytorch](https://pytorch.org).
 
@@ -15,15 +15,22 @@ This Neural Network was used on two problems:
 - [Recognizing handwritten digits from images](digit_recognition_test.py)
 
 
+# Neural Network
+
+The main Neural Network implementation is in the file [NeuralNetwork.py](NeuralNetwork.py).
+
+
 ## Google Colab Notebooks
 
-To access the Google Colab Notebook that demonstrates the trained Neural Network on XOR Gate problem, click [here](https://colab.research.google.com/github/gluten-morgen/Neural_Network_from_Scratch/blob/master/xor_problem_test.ipynb), or open the file [xor_problem_test.ipynb](xor_problem_test.ipynb)
+To access the Google Colab Notebook that demonstrates the trained Neural Network on **XOR Gate problem**, click [here](https://colab.research.google.com/github/gluten-morgen/Neural_Network_from_Scratch/blob/master/xor_problem_test.ipynb), or **open this file to view the code and outputs**: [xor_problem_test.ipynb](xor_problem_test.ipynb)
 
 
-To access the Google Colab notebook that demonstrates the trained Neural Network on handwritten digits, click [here](https://colab.research.google.com/github/gluten-morgen/Neural_Network_from_Scratch/blob/master/digit_recognition_test.ipynb), or open the file [digit_recognition_test.ipynb](digit_recognition_test.ipynb)
+To access the Google Colab notebook that demonstrates the trained Neural Network on **MNIST handwritten digit recognition**, click [here](https://colab.research.google.com/github/gluten-morgen/Neural_Network_from_Scratch/blob/master/digit_recognition_test.ipynb), or **open this file to view the code and outputs**: [digit_recognition_test.ipynb](digit_recognition_test.ipynb)
 
 
 # Libraries Used
+
+The module `NeuralNetwork` uses the following libraries:
 
 ```
 numpy
@@ -63,14 +70,29 @@ $$Z = W X^T + b$$
 
 where,
 
-$Z$ is the weighted sum of the inputs
-$X$ are the inputs
-$b$ is the bias (taken as $0$ in this example) 
+$Z$ is the weighted sum of the inputs.
+
+$X$ are the inputs.
+
+$b$ is the bias (taken as $0$ in this example).
 
 
-![linear_operation](images/linear.png)
+![linear_operation](images/linear_1.png)
 
-Each of the batches of $Z$ are stored in a `list`. Note that the output of the above operation is transposed before storing into the list.
+Running the linear weighted sums $Z$ through an *Activation function*, $\sigma(Z)$:
+
+$$A = \sigma(Z)$$
+
+Thus, for the next layer,
+
+![linear_operation2](images/linear_2.png)
+
+
+All the weighted sums $Z$ from both operations are then stored in a `np.ndarray`. An array of zeros are added in place of the *input* layer for standardization in indexing for different operations.
+
+![z_layers](images/z_layers.png)
+
+Each of the $Z_\text{layers}$ corresponding to a single batch are stored in a `list`. Note that the output of the above operation is transposed before storing into the list.
 
 ![z_batch](images/z_batch.png)
 
