@@ -11,7 +11,7 @@ Note: The implementation of the Neural Network was inspired from [Pytorch](https
 
 
 This Neural Network was used on two problems:
-- [Approximating a XOR gate](xor_problem.py)
+- [Approximating a XOR gate](xor_problem_test.py)
 - [Recognizing handwritten digits from images](digit_recognition_test.py)
 
 
