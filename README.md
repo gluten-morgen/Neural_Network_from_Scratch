@@ -15,6 +15,11 @@ This Neural Network was used on two problems:
 - [Recognizing handwritten digits from images](digit_recognition_test.py)
 
 
+## Google Colab Notebooks
+
+To access the Google Colab Notebook that demonstrates the trained Neural Network on XOR Gate problem, click [here](https://colab.research.google.com/github/gluten-morgen/Neural_Network_from_Scratch/blob/master/xor_problem_test.ipynb), or open the file [xor_problem_test.ipynb](xor_problem_test.ipynb)
+
+
 To access the Google Colab notebook that demonstrates the trained Neural Network on handwritten digits, click [here](https://colab.research.google.com/github/gluten-morgen/Neural_Network_from_Scratch/blob/master/digit_recognition_test.ipynb), or open the file [digit_recognition_test.ipynb](digit_recognition_test.ipynb)
 
 
